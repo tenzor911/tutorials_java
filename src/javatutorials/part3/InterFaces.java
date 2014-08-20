@@ -10,6 +10,14 @@ package javatutorials.part3;
  *
  * @author tenzor
  */
-public class InterFaces {
+public interface InterFaces {
+    void inputData(String dataForInput);
     
+    void actionAdd();
+    
+    void actionSubstract();
+    
+    void actionMultiple();
+    
+    void actionDivide();
 }

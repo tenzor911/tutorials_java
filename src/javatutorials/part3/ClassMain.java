@@ -11,5 +11,7 @@ package javatutorials.part3;
  * @author tenzor
  */
 public class ClassMain {
-    
+    public static void main(String args[]) {
+        
+    }
 }
