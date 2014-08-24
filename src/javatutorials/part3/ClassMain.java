@@ -1,7 +1,26 @@
 /*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+Программа, которая непрерывно считывает ввод с консоли, пока не будет введено слово exit
+    Пользователь, может писать челочисленное число, либо операцию (+, -, /, *)
+    В одну строку может быть введено либо число, либо операция, затем энтер
+    И если введено число, то оно помещается в stack, если введена операция, то берётся 2 числа из стека, и производится нужная операция с ними.
+    Результат кладётся в стек и выводится на консоль.
+    
+    
+    Например:
+    
+    4
+    (enter)
+    5
+    (enter)
+    10
+    (enter)
+    *
+    (enter)
+    +
+    (enter)
+    
+    это эквивалентно 4  + (5 * 10)
+
  */
 
 package javatutorials.part3;
@@ -12,6 +31,7 @@ package javatutorials.part3;
  */
 public class ClassMain {
     public static void main(String args[]) {
-        
+        ClassInputData myclass = new ClassInputData();
+        myclass.getData();
     }
 }
