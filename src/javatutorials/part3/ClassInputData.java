@@ -1,25 +1,39 @@
 package javatutorials.part3;
 
 import java.util.Scanner;
+import java.util.Stack;
 
 public class ClassInputData {
-    //String numVar = null;
     public void getData() {
         System.out.print("Введите число или операцию: ");
         Scanner inputVar = new Scanner(System.in);
         String operationType = inputVar.nextLine();
-        String myStr = "";
-        
-        
-        char[] input = operationType.trim().toCharArray();
-            
-        for(int counter = 0; counter < input.length; counter++) {
-            if (input[counter] == '0'){
-                myStr = myStr + input[counter];
+        char[] symbolForInput = operationType.trim().toCharArray();
+        Stack calcStack = new Stack();
+
+        String strOfNumbers = "";
+
+        for(int firstCycleCounter = 0; firstCycleCounter < symbolForInput.length; firstCycleCounter++) {
+            if (symbolForInput[firstCycleCounter] >= '0' && symbolForInput[firstCycleCounter] <= '9') {
+                strOfNumbers = strOfNumbers + symbolForInput[firstCycleCounter];
+            } else if (symbolForInput[firstCycleCounter] == '+') {
+                System.out.println("Вы ввели операцию сложения");    
+            } else if (symbolForInput[firstCycleCounter] == '-') {
+                System.out.println("Вы ввели операцию вычитания");
+            } else if (symbolForInput[firstCycleCounter] == '*') {
+                System.out.println("Вы ввели операцию умножения");
+            } else if (symbolForInput[firstCycleCounter] == '/') {
+                System.out.println("Вы ввели операцию деления");
+            } else {
+                System.out.println("ERROR!!!");
+                System.exit(0);
             }
+        }
+        calcStack.push(Integer.parseInt(strOfNumbers));
+        System.out.println(calcStack.lastElement());
             
             
-                   if (input[counter] == '+') {
+           /*        else if (input[counter] == '+') {
                 System.out.println("Вы ввели операцию сложения");    
             } else if (input[counter] == '-') {
                 System.out.println("Вычитание");
@@ -40,7 +54,8 @@ public class ClassInputData {
             System.out.println("Вы ввели операцию деления");
         }  else {
             System.out.println("Это не число и не операция!");
+        }*/
         }
-        
+
     }
-}
+
