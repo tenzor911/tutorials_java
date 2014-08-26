@@ -8,7 +8,29 @@ public class ClassInputData {
         System.out.print("Введите число или операцию: ");
         Scanner inputVar = new Scanner(System.in);
         String operationType = inputVar.nextLine();
-        if ((operationType).equals("+")) {
+        String myStr = "";
+        
+        
+        char[] input = operationType.trim().toCharArray();
+            
+        for(int counter = 0; counter < input.length; counter++) {
+            if (input[counter] == '0'){
+                myStr = myStr + input[counter];
+            }
+            
+            
+                   if (input[counter] == '+') {
+                System.out.println("Вы ввели операцию сложения");    
+            } else if (input[counter] == '-') {
+                System.out.println("Вычитание");
+            } else if (input[counter] == '*') {
+                System.out.println("Умножение");
+            } else if (input[counter] == '/') {
+                System.out.println("Деление");
+            }
+        }
+        
+        if ((input)) {
             System.out.println("Вы ввели операцию сложения"); 
         } else if ((operationType).equals("-")) {
             System.out.println("Вы ввели операцию вычитания");
