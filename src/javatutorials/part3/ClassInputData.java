@@ -6,6 +6,10 @@ import java.util.Stack;
 public class ClassInputData {
     
     boolean mainCycle = false;
+    
+    Integer objFirstNumber;
+    Integer objSecondNumber;
+    
     int firstNumber; 
     int secondNumber;
     int resultNumber;
@@ -28,10 +32,13 @@ public class ClassInputData {
                     action_add();
                 } else if (symbolForInput[firstCycleCounter] == '-') {
                     System.out.println("Вы ввели операцию вычитания");
+                    action_substract();
                 } else if (symbolForInput[firstCycleCounter] == '*') {
                     System.out.println("Вы ввели операцию умножения");
+                    action_multiple();
                 } else if (symbolForInput[firstCycleCounter] == '/') {
                     System.out.println("Вы ввели операцию деления");
+                    action_divide();
                 } else if (symbolForInput[firstCycleCounter] == 'e'){
                     System.out.println("Вы ввели комбинацию для выхода. Программа будет завершена!");
                     mainCycle = true;
@@ -43,7 +50,39 @@ public class ClassInputData {
         }
     }
     void action_add() {
-        System.out.println(calcStack.pop());
+        objFirstNumber = (Integer)calcStack.pop();
+        firstNumber = objFirstNumber;
+        objSecondNumber = (Integer)calcStack.pop();
+        secondNumber = objSecondNumber;
+        resultNumber = firstNumber + secondNumber;
+        System.out.println(resultNumber);
+    }
+    
+    void action_substract() {
+        objFirstNumber = (Integer)calcStack.pop();
+        firstNumber = objFirstNumber;
+        objSecondNumber = (Integer)calcStack.pop();
+        secondNumber = objSecondNumber;
+        resultNumber = firstNumber - secondNumber;
+        System.out.println(resultNumber);
+    }
+    
+    void action_multiple() {
+        objFirstNumber = (Integer)calcStack.pop();
+        firstNumber = objFirstNumber;
+        objSecondNumber = (Integer)calcStack.pop();
+        secondNumber = objSecondNumber;
+        resultNumber = firstNumber * secondNumber;
+        System.out.println(resultNumber);
+    }
+    
+    void action_divide() {
+        objFirstNumber = (Integer)calcStack.pop();
+        firstNumber = objFirstNumber;
+        objSecondNumber = (Integer)calcStack.pop();
+        secondNumber = objSecondNumber;
+        resultNumber = firstNumber / secondNumber;
+        System.out.println(resultNumber);
     }
     
 }
