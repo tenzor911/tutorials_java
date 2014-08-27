@@ -49,41 +49,61 @@ public class ClassInputData {
             } 
         }
     }
-    void action_add() {
-        objFirstNumber = (Integer)calcStack.pop();
-        firstNumber = objFirstNumber;
-        objSecondNumber = (Integer)calcStack.pop();
-        secondNumber = objSecondNumber;
-        resultNumber = firstNumber + secondNumber;
-        System.out.println(resultNumber);
+    
+    private void action_add() {
+        if( !calcStack.empty() ) {
+            objFirstNumber = (Integer)calcStack.pop();
+            firstNumber = objFirstNumber;
+            objSecondNumber = (Integer)calcStack.pop();
+            secondNumber = objSecondNumber;
+            resultNumber = firstNumber + secondNumber;
+            System.out.println(resultNumber);
+        } else {
+            resultNumber = 0;
+            System.out.println(resultNumber);
+        }
     }
     
-    void action_substract() {
-        objFirstNumber = (Integer)calcStack.pop();
-        firstNumber = objFirstNumber;
-        objSecondNumber = (Integer)calcStack.pop();
-        secondNumber = objSecondNumber;
-        resultNumber = firstNumber - secondNumber;
-        System.out.println(resultNumber);
+    private void action_substract() {
+        if( !calcStack.empty() ) {
+            objFirstNumber = (Integer)calcStack.pop();
+            firstNumber = objFirstNumber;
+            objSecondNumber = (Integer)calcStack.pop();
+            secondNumber = objSecondNumber;
+            resultNumber = firstNumber - secondNumber;
+            System.out.println(resultNumber);
+        } else {
+            resultNumber = 0;
+            System.out.println(resultNumber); 
+        }
     }
     
-    void action_multiple() {
-        objFirstNumber = (Integer)calcStack.pop();
-        firstNumber = objFirstNumber;
-        objSecondNumber = (Integer)calcStack.pop();
-        secondNumber = objSecondNumber;
-        resultNumber = firstNumber * secondNumber;
-        System.out.println(resultNumber);
+    private void action_multiple() {
+        if( !calcStack.empty() ) {
+            objFirstNumber = (Integer)calcStack.pop();
+            firstNumber = objFirstNumber;
+            objSecondNumber = (Integer)calcStack.pop();
+            secondNumber = objSecondNumber;
+            resultNumber = firstNumber * secondNumber;
+            System.out.println(resultNumber);
+        } else {
+            resultNumber = 0;
+            System.out.println(resultNumber); 
+        }
     }
     
-    void action_divide() {
-        objFirstNumber = (Integer)calcStack.pop();
-        firstNumber = objFirstNumber;
-        objSecondNumber = (Integer)calcStack.pop();
-        secondNumber = objSecondNumber;
-        resultNumber = firstNumber / secondNumber;
-        System.out.println(resultNumber);
-    }
-    
+    private void action_divide() {
+        if( !calcStack.empty() ) {
+            objFirstNumber = (Integer)calcStack.pop();
+            firstNumber = objFirstNumber;
+            objSecondNumber = (Integer)calcStack.pop();
+            secondNumber = objSecondNumber;
+            resultNumber = firstNumber / secondNumber;
+            System.out.println(resultNumber);
+        } else {
+            resultNumber = 0;
+            System.out.println(resultNumber); 
+        }
+    }  
 }
 
