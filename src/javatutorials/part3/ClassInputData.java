@@ -40,7 +40,6 @@ public class ClassInputData {
                     mainCycle = true;
                 }
             } 
-            
         }
     }
     void action_add() {
