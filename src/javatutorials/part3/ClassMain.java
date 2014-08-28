@@ -1,3 +1,12 @@
+package javatutorials.part3;
+
+public class ClassMain {
+    public static void main(String args[]) {
+        ClassInputData myclass = new ClassInputData();
+        myclass.getData();
+    }
+}
+
 /*
 Программа, которая непрерывно считывает ввод с консоли, пока не будет введено слово exit
     Пользователь, может писать челочисленное число, либо операцию (+, -, /, *)
@@ -23,15 +32,4 @@
 
  */
 
-package javatutorials.part3;
 
-/**
- *
- * @author tenzor
- */
-public class ClassMain {
-    public static void main(String args[]) {
-        ClassInputData myclass = new ClassInputData();
-        myclass.getData();
-    }
-}
