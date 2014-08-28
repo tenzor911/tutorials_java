@@ -1,9 +1,8 @@
 package javatutorials.part3;
 
 public interface InterFaceActions {
-    void actionAdd(int first, int second);
-    void actionSubstract(int first, int second);
-    void actionMultiple(int first, int second);
-    void actionDivide(int first, int second);
-    int setResult();
+    void action_add();
+    void action_substract();
+    void action_multiple();
+    void action_divide();
 }

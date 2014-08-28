@@ -1,31 +1,31 @@
 package javatutorials.part3;
 
 public class ClassActions implements InterFaceActions {
-
-    int result = 0;
     
+    ClassVariables commonVars = new ClassVariables();
+    ClassNumbers checkNumbers = new ClassNumbers();
+
     @Override
-    public void actionAdd(int first, int second) {
-        result = first + second;
+    public void action_add() {
+        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() + checkNumbers.checkSecondNumberInStack();
+        System.out.println(commonVars.resultNumber);
     }
 
     @Override
-    public void actionSubstract(int first, int second) {
-        result = first - second;
+    public void action_substract() {
+        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() - checkNumbers.checkSecondNumberInStack();
+        System.out.println(commonVars.resultNumber);
     }
 
     @Override
-    public void actionMultiple(int first, int second) {
-        result = first * second;
+    public void action_multiple() {
+        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() * checkNumbers.checkSecondNumberInStack();
+        System.out.println(commonVars.resultNumber);
     }
 
     @Override
-    public void actionDivide(int first, int second) {
-        result = first / second;
-    }
-    
-    @Override
-    public int setResult() {
-        return result;
-    }
+    public void action_divide() {
+        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() / checkNumbers.checkSecondNumberInStack();
+        System.out.println(commonVars.resultNumber);
+    }    
 }
