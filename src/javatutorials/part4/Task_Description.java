@@ -23,6 +23,6 @@ package javatutorials.part4;
  *
  * @author tenzor
  */
-public class NewClass {
+public class Task_Description {
     
 }
