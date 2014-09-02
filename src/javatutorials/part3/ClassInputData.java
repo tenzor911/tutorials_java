@@ -24,21 +24,17 @@ public class ClassInputData {
                     calcStack.push(Integer.parseInt(strOfNumbers));                                             //кладём число в стек
                     checkNumbers.setInputNumber(calcStack);
                 } else if (symbolForInput[firstCycleCounter] == '+') {
-                    System.out.println("Вы ввели операцию сложения");  
-                    //arithmeticActions.action_add();
-                    action_add();
+                    System.out.println("Вы ввели операцию сложения"); 
+                    arithmeticActions.action_add(checkNumbers.checkFirstNumberInStack(), checkNumbers.checkSecondNumberInStack());
                 } else if (symbolForInput[firstCycleCounter] == '-') {
                     System.out.println("Вы ввели операцию вычитания");
-                    //arithmeticActions.action_substract();
-                    action_substract();
+                    arithmeticActions.action_substract(checkNumbers.checkFirstNumberInStack(), checkNumbers.checkSecondNumberInStack());
                 } else if (symbolForInput[firstCycleCounter] == '*') {
                     System.out.println("Вы ввели операцию умножения");
-                    //arithmeticActions.action_multiple();
-                    action_multiple();
+                    arithmeticActions.action_multiple(checkNumbers.checkFirstNumberInStack(), checkNumbers.checkSecondNumberInStack());
                 } else if (symbolForInput[firstCycleCounter] == '/') {
                     System.out.println("Вы ввели операцию деления");
-                    //arithmeticActions.action_divide();
-                    action_divide();
+                    arithmeticActions.action_divide(checkNumbers.checkFirstNumberInStack(), checkNumbers.checkSecondNumberInStack());
                 } else if (symbolForInput[firstCycleCounter] == 'e'){
                     System.out.println("Вы ввели комбинацию для выхода. Программа будет завершена!");
                     commonVars.mainCycle = true;
@@ -48,28 +44,6 @@ public class ClassInputData {
                 }
             } 
         }
-    }
-    public void action_add() {
-        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() + checkNumbers.checkSecondNumberInStack();
-        System.out.println("ваш результат: " + commonVars.resultNumber);
-    }
-
-
-    public void action_substract() {
-        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() - checkNumbers.checkSecondNumberInStack();
-        System.out.println("ваш результат: " + commonVars.resultNumber);
-    }
-
-
-    public void action_multiple() {
-        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() * checkNumbers.checkSecondNumberInStack();
-        System.out.println("ваш результат: " + commonVars.resultNumber);
-    }
-
-
-    public void action_divide() {
-        commonVars.resultNumber = checkNumbers.checkFirstNumberInStack() / checkNumbers.checkSecondNumberInStack();
-        System.out.println("ваш результат: " + commonVars.resultNumber);
-    }    
+    }  
 }
 

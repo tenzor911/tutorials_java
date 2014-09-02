@@ -1,15 +1,25 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 package javatutorials.part4;
 
-/**
- *
- * @author tenzor
- */
-public class ClassFile {
-    
+import java.nio.file.DirectoryStream;
+
+public class ClassFile implements Node {
+    @Override
+    public void isDirectory() {
+        
+    }
+
+    @Override
+    public void isFile() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void getName() {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
+
+    @Override
+    public void getChildren(String path) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }    
 }

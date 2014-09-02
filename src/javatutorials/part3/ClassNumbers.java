@@ -8,12 +8,10 @@ public class ClassNumbers {
     Stack varStack = new Stack();
     
     public void setInputNumber(Stack numInStack) {
-        //System.out.println(varStack);
         varStack = numInStack;
     }
     
     public Stack getStack() {
-        //System.out.println(varStack);
         return varStack;
     }
     
@@ -21,10 +19,8 @@ public class ClassNumbers {
         if( !getStack().empty() ) {
             commonVars.objFirstNumber = (Integer)getStack().pop();
             commonVars.firstNumber = commonVars.objFirstNumber;
-            //System.out.println(commonVars.firstNumber);
         } else {
             commonVars.firstNumber = 0;
-            //System.out.println("check"+commonVars.firstNumber);
         }
         return commonVars.firstNumber;
     }

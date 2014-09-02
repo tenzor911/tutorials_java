@@ -1,5 +1,8 @@
 package javatutorials.part4;
 
 public interface Node {
-    void enterTheFolder();
+    void isDirectory();
+    void isFile();
+    void getName();
+    void getChildren(String path);
 }
