@@ -4,5 +4,7 @@ public interface Node {
     void isDirectory();
     void isFile();
     void getName();
-    void getChildren(String path);
+    void getChildren();
+    void getEnteredPath(String path);
+    String setEnteredPath();
 }
